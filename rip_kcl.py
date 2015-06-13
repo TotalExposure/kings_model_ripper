@@ -39,7 +39,7 @@ for meta_map in meta_maps:
     urllib2.urlopen(actual_map_url).read()
 
     start_date = meta_map["@EndDate"]
-    start_date_dirname = start_date.replace(" ", "-")
+    start_date_dirname = start_date.replace(" ", "-").replace("/", "-")
 
     lonmin = -0.59196709334786
     lonmax = 0.387768324998984
