@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# I am a muppet and forgot to replace or escape slashes in the date in the path.
+# This script fixes that mistake
+
+for f in $(find data1 -name map.png)
+do
+newfile=$(echo $f | sed 's/\/\([0-9][0-9]\)\/\([0-9][0-9]\)\//\/\1-\2-/' | sed 's/data1/data/g')
+mkdir -p `dirname $newfile`
+cp $f $newfile
+done
+
+# I am forgiven.
+
+
