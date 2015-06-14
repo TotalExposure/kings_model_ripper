@@ -9,5 +9,6 @@ setup(name='kcl_ripper',
       license='GPL',
       install_requires=[
           'Image',
+          'numpy'
       ],
       zip_safe=False)
